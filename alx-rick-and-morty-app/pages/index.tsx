@@ -1,4 +1,4 @@
-import React from "react"
+/* import React from "react"
 import { useQuery } from "@apollo/client"
 import { GET_EPISODES } from "../graphql/queries"
 import { EpisodeProps } from "../interfaces"
@@ -28,13 +28,13 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#A3D5E0] to-[#F4F4F4] text-gray-800">
-      {/* Header */}
+      {/* Header }
       <header className="bg-[#4CA1AF] text-white py-6 text-center shadow-md">
         <h1 className="text-4xl font-bold tracking-wide">Rick and Morty Episodes</h1>
         <p className="mt-2 text-lg italic">Explore the multiverse of adventures!</p>
       </header>
 
-      {/* Main Content */}
+      {/* Main Content }
       <main className="flex-grow p-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {results && results.map(({ id, name, air_date, episode }: EpisodeProps, key: number) => (
@@ -48,7 +48,7 @@ const Home: React.FC = () => {
           ))}
         </div>
 
-        {/* Pagination Buttons */}
+        {/* Pagination Buttons }
         <div className="flex justify-between mt-6">
           <button 
             onClick={() => setPage(prev => prev > 1 ? prev - 1 : 1)}
@@ -63,7 +63,7 @@ const Home: React.FC = () => {
         </div>
       </main>
 
-      {/* Footer */}
+      {/* Footer }
       <footer className="bg-[#4CA1AF] text-white py-4 text-center shadow-md">
         <p>&copy; 2024 Rick and Morty Fan Page</p>
       </footer>
@@ -71,4 +71,20 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default Home */
+
+import ErrorBoundary from '../components/ErrorBoundary';
+import ErrorProneComponent from '../components/ErrorProneComponent';
+
+const Home: React.FC = () => {
+  return (
+    <ErrorBoundary>
+      <ErrorProneComponent />
+    </ErrorBoundary>
+  );
+};
+
+export default Home;
+
+
+
